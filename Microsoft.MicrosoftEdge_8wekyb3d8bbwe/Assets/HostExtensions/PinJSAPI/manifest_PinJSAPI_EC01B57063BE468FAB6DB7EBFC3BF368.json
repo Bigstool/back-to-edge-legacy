@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+  "name": "PinJSAPI",
+  "author": "Microsoft",
+  "version": "1.1",
+  "description": "Pinning Javascript API functionality for MS Edge",
+  "key": "PinJSAPI_EC01B57063BE468FAB6DB7EBFC3BF368"
+}

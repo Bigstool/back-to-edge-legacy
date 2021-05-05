@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>证书错误: 已阻止导航</title>
+        <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+        <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+        <script language="javascript" type="text/javascript">
+            var L_CertUnknownCA_TEXT = "你的电脑不信任此网站的安全证书。";
+            var L_CertExpired_TEXT = "该网站的安全证书尚未生效或已过期。";
+            var L_CertCNMismatch_TEXT = "该网站的安全证书中的主机名与你正在尝试访问的网站不同。";
+            var L_CertRevoked_TEXT = "此网站的安全证书已被吊销，因此现在你不能访问此网站。";
+            var L_CertSigFailed_TEXT = "此网站的安全证书不安全。";
+            var L_CertWeakSignature_TEXT = "该网站的安全证书具有弱签名，所以它并不安全。";
+
+            var L_ERROR_CODE_TEXT = "错误代码: ";
+
+            var L_MOREINFO_TEXT = "详细信息";
+
+            window.onload = function () {
+                getCertErrorInfo();
+                initMoreInfo('infoBlockID', L_MOREINFO_TEXT);
+                setGoHomeTarget();
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="Wrapper">
+            <div id="invalidcert">
+                <div class="msgBlock">
+                    <div class="msgBody">
+                        <table role="presentation">
+                            <tr>
+                                <td aria-hidden="true">
+                                    <span id="erroricon">&#xE7BA;</span>
+                                </td>
+                                <td>
+                                    <h2 class="red" id="invalidcert_header">此站点不安全</h2>
+                                    <br />
+                                    <p id="invalidcert_body1">这可能意味着，有人正在尝试欺骗你或窃取你发送到服务器的任何信息。你应该立即关闭此站点。</p>
+                                    <br />
+                                    <table role="presentation">
+                                        <tr>
+                                            <td aria-hidden="true"><span id="smallgoodicon">&#xE737;</span></td>
+                                            <td><a href="about:start" id="gohome" style="margin: 0 7px 0 7px;"><id id="invalidcert_gohome">转到起始页</id></a></td>
+                                        </tr>
+                                    </table>
+                                    <div id="moreInfoDropdown">
+                                        <a href="javascript:expandCollapseDetails('infoBlockID');" id="moreInformationDropdownLink" role="button" style="text-decoration: none;">
+                                            <span id="moreInformationDropdownSpan"></span>
+                                        </a>
+                                    </div>
+                                    <div id="infoBlockID">
+                                        <p id="certReason"></p>
+                                        <p id="ErrorCode"></p>
+                                        <p id="hstsNoContinue">由于此站点使用 HTTP 严格传输安全，因此你目前无法继续访问此站点。</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 

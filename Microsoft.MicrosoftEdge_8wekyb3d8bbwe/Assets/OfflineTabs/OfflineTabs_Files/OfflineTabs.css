@@ -1,0 +1,12 @@
+﻿@charset"UTF-8";
+html {
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0px;
+}
+
+.NewTabPageHostComponentContainer {
+    height: 100vh;
+}

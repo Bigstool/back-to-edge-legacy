@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>HTTP 408/409 错误</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP408">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="servbusy_header1">HTTP 408/409 错误</h1>
+                        <h1 id="servbusy_header2">信息高速公路出现交通阻塞情况!</h1>
+                        <p id="servbusy_body1">Microsoft Edge 无法立即连接到此页，因为有太多人在尝试同时加载它。</p>
+                        <p id="servbusy_body2">尝试此操作</p>
+                        <ul>
+                            <li><a href="#" onclick="clickRefresh(); return false;"><id id="servbusy_refresh">刷新页面</id></a></li>
+                            <li><id id="servbusy_retype">重新键入网址</id></li>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="servbusy_goback">返回到前一页</id></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

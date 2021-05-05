@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>此页无法加载</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="repost">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="repost_header">此页刚才就在这里</h1>
+                        <p id="repost_body1">尝试刷新。您可能需要浏览网站以再次找到本页。</p>
+                        <p id="repost_body2">尝试此操作</p>
+                        <ul>
+                            <li><a href="#" onclick="window.location.reload(); return false;"><id id="repost_refresh">刷新</id></a></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">报告这一问题</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="repost_PrivacyStatementLink"><id id="repost_privacystatement"><small>隐私声明</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

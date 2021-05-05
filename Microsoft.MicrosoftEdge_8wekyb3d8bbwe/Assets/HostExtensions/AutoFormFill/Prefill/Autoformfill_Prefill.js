@@ -1,0 +1,1 @@
+﻿(function(){"use strict";var n=function(t){t.srcElement.form!=null&&t.srcElement.form!=undefined&&(window.document.removeEventListener("focus",n,!0),browser.webruntime.postMessageToHost(["ContentScriptInjectionNeeded","true"]))};window.document.addEventListener("focus",n,!0)})()

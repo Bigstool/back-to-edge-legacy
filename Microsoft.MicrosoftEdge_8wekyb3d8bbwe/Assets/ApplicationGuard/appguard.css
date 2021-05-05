@@ -1,0 +1,475 @@
+/* Copyright (C) Microsoft Corporation. All rights reserved. */
+
+#welcome-tagline-container #welcome-claim a:hover, #welcome-tagline-container #welcome-tagline a:hover, body {
+    color: #000;
+}
+
+@font-face {
+    src: local("Segoe UI Light");
+    font-family: "Segoe UI";
+    font-weight: 200;
+}
+
+@font-face {
+    src: local("Segoe UI Semilight");
+    font-family: "Segoe UI";
+    font-weight: 300;
+}
+
+@font-face {
+    src: local("Segoe UI");
+    font-family: "Segoe UI";
+    font-weight: 400;
+}
+
+@font-face {
+    src: local("Segoe UI Semibold");
+    font-family: "Segoe UI";
+    font-weight: 600;
+}
+
+@font-face {
+    src: local("Segoe UI Bold");
+    font-family: "Segoe UI";
+    font-weight: 700;
+}
+
+.no-transition-for-reals * {
+    transition: none !important;
+}
+
+.loading {
+    opacity: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Segoe UI";
+    font-size: 16px;
+}
+
+@viewport {
+    width: 2000px;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+h1, h2 {
+    font-size: 2.875rem;
+    font-weight: 100;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 2.125rem;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90rem;
+    height: 50rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: visible;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+#welcome {
+    position: relative;
+    z-index: 100;
+}
+
+#welcome-heading {
+    margin: 2rem 0 .35em;
+    white-space: nowrap;
+}
+
+#welcome-tagline-container #welcome-claim, #welcome-tagline-container #welcome-tagline {
+    position: absolute;
+    width: 100%;
+    margin-top: -.2em;
+}
+
+    #welcome-tagline-container #welcome-claim span, #welcome-tagline-container #welcome-tagline span {
+        display: inline-block;
+    }
+
+    #welcome-tagline-container #welcome-claim a, #welcome-tagline-container #welcome-tagline a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    #welcome-tagline-container #welcome-claim strong {
+        font-weight: 700;
+        color: #000;
+    }
+
+#welcome-heading span {
+    display: inline-block;
+    padding: .2em 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#laptop-message {
+    position: absolute;
+    top: 30%;
+    left: 51%;
+    z-index: 100;
+    width: 42%;
+    font-weight: 400;
+    text-align: left;
+}
+
+    #laptop-message p {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.45;
+        color: rgba(0,0,0,.5);
+    }
+
+    #laptop-message h3 {
+        margin-bottom: .1em;
+        font-size: 1.875rem;
+        font-weight: 300;
+    }
+
+#bottom-bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1rem;
+    background-color: #0C64A9;
+}
+
+#laptop, #laptop-fade, .face-texture, .scene {
+    position: absolute;
+}
+
+#laptop-fade {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#laptop {
+    top: 60%;
+    left: 55%;
+    width: 40em;
+    height: 30em;
+    margin-top: -15em;
+    margin-left: -20em;
+    overflow: hidden;
+    font-size: 1.3rem;
+    background: 0 0;
+    perspective: 75rem;
+}
+
+.scene, .shape {
+    top: 50%;
+    left: 50%;
+}
+
+.laptop-bottom .ft .face-texture, .laptop-bottom .rt .face-texture {
+    background-color: #4F4F4F;
+}
+
+.cr, .face, .face-wrapper, .scene, .shape {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.scene {
+    width: 80em;
+    height: 80em;
+    margin: -40em 0 0 -40em;
+}
+
+.shape {
+    width: 0;
+    height: 0;
+    transform-origin: 50%;
+}
+
+.cuboid .bk, .cuboid .ft, .face-texture, .face-texture img, .face-wrapper .face {
+    width: 100%;
+    height: 100%;
+}
+
+.face, .face-wrapper {
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+}
+
+.face {
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.face-wrapper .face {
+    left: 100%;
+}
+
+.face-texture {
+    top: 0;
+    left: 0;
+}
+
+.side {
+    left: 50%;
+}
+
+.cr, .cr .side {
+    height: 100%;
+}
+
+.cuboid .bk {
+    left: 100%;
+}
+
+.cuboid .rt {
+    transform: rotateY(-90deg) translateX(-50%);
+}
+
+.cuboid .lt {
+    transform: rotateY(90deg) translateX(-50%);
+    left: 100%;
+}
+
+.cuboid .tp {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+.cuboid .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+    top: 100%;
+}
+
+.laptop-bottom {
+    width: 28em;
+    height: .8em;
+    margin: -.4em 0 0 -14em;
+    transform: translate3D(0,8em,-1em) rotateX(0) rotateY(0) rotateZ(0);
+}
+
+    .laptop-bottom .lt, .laptop-bottom .rt {
+        width: 18em;
+        height: .8em;
+    }
+
+    .laptop-bottom .ft {
+        transform: translateZ(9em);
+    }
+
+    .laptop-bottom .bk {
+        transform: translateZ(-9em) rotateY(180deg);
+    }
+
+    .laptop-bottom .bm, .laptop-bottom .tp {
+        width: 28em;
+        height: 18em;
+    }
+
+        .laptop-bottom .tp .face-texture {
+            background-color: #B9B9B9;
+        }
+
+        .laptop-back .bk .face-texture, .laptop-bottom .bm .face-texture {
+            background-color: #4F4F4F;
+        }
+
+.laptop-back {
+    width: .5em;
+    height: 18em;
+    margin: -9em 0 0 -.25em;
+    transform: translate3D(0,-.5em,-12em) rotateX(15deg) rotateY(-270deg) rotateZ(0);
+}
+
+    .laptop-back .lt, .laptop-back .rt {
+        width: 28em;
+        height: 18em;
+    }
+
+    .laptop-back .ft {
+        transform: translateZ(14em);
+    }
+
+    .laptop-back .bk {
+        transform: translateZ(-14em) rotateY(180deg);
+    }
+
+.screen-front, .screen-normal, .shield {
+    margin: -8.5em 0 0 -.0005em;
+    transform: translate3D(0,-.5em,-11.7em) rotateX(15deg) rotateY(-270deg) rotateZ(0);
+}
+
+.laptop-back .rt .face-texture {
+    background-color: #333;
+    box-sizing: border-box;
+    border: .55em solid #787878;
+}
+
+.laptop-back .bm, .laptop-back .tp {
+    width: .5em;
+    height: 28em;
+}
+
+.screen-front, .screen-normal {
+    width: .001em;
+    height: 17em;
+}
+
+    .screen-front .rt, .screen-normal .rt {
+        width: 27em;
+        height: 17em;
+    }
+
+        .screen-front .rt .face-texture, .screen-normal .rt .face-texture {
+            background-color: transparent;
+        }
+
+.shield {
+    width: .001em;
+    height: 17em;
+}
+
+    .shield .rt {
+        width: 27em;
+        height: 17em;
+    }
+
+        .shield .rt .face-texture {
+            background-color: rgba(158,158,242,0);
+            box-sizing: border-box;
+            border: 2px solid rgba(255,255,255,.25);
+        }
+
+#laptop {
+    transition: transform 1s cubic-bezier(.13,.7,.15,.95);
+    transform: translate(0,0);
+}
+
+#laptop-message {
+    opacity: 0;
+    transition: transform 1s cubic-bezier(.13,.7,.15,.95),opacity 1s cubic-bezier(.13,.7,.15,.95);
+    transform: translate(-7rem,0);
+}
+
+.scene {
+    transform: rotateX(-7deg) rotateY(390deg);
+}
+
+/* 
+    Required to disable class-change optimizations and fix missing text animation.
+    TODO: Remove after fixing "13708024: Class-change optimisations might miss cases if an animation is in progress"
+*/
+.laptop-expanded {
+    box-sizing: inherit;
+}
+
+.laptop-expanded #laptop {
+    transform: translate(-20rem,1rem) scale(.9);
+}
+
+.laptop-expanded #laptop-message {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+    .laptop-expanded #laptop-message h3 {
+        transform: translate(0,0);
+    }
+
+.laptop-expanded .scene {
+    transform: rotateX(-10deg) rotateY(400deg);
+}
+
+    .laptop-expanded .scene .shield {
+        width: .001em;
+        height: 19em;
+        margin: -9.5em 0 0 -.0005em;
+        opacity: 1;
+        transform: translate3D(0,-2.5em,-1.5em) rotateX(10deg) rotateY(-270deg) rotateZ(0);
+    }
+
+        .laptop-expanded .scene .shield .rt {
+            width: 32em;
+            height: 19em;
+        }
+
+            .laptop-expanded .scene .shield .rt .face-texture {
+                background-color: rgba(164,164,164,.25);
+            }
+
+    .laptop-expanded .scene .screen-front {
+        width: .001em;
+        height: 17em;
+        margin: -8.5em 0 0 -.0005em;
+        opacity: 1;
+        transform: translate3D(0,-5em,3em) rotateX(7deg) rotateY(-270deg) rotateZ(0);
+    }
+
+        .laptop-expanded .scene .screen-front .ft {
+            transform: translateZ(13.5em);
+        }
+
+        .laptop-expanded .scene .screen-front .bk {
+            transform: translateZ(-13.5em) rotateY(180deg);
+        }
+
+        .laptop-expanded .scene .screen-front .rt, .laptop-expanded .scene .screen-front .screen-protected .lt {
+            width: 27em;
+            height: 17em;
+        }
+
+        .laptop-expanded .scene .scene.expanded .screen-front .screen-protected .bm, .laptop-expanded .scene .screen-front .tp {
+            width: .001em;
+            height: 27em;
+        }
+
+.face, .face-texture, .scene, .screen-front, .screen-normal, .shield {
+    transition: all 1s cubic-bezier(.13,.7,.15,.95);
+}
+
+@keyframes fade-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translate(0,8rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+#laptop-fade, #welcome-claim, #welcome-heading {
+    animation-name: fade-from-bottom;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(.09,.805,.155,.98);
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+#welcome-claim {
+    animation-duration: 1s;
+    animation-delay: 1.025s;
+}
+
+#laptop-fade {
+    animation-duration: 1.2s;
+    animation-delay: 1.05s;
+}

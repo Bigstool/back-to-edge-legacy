@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>无法显示该网页</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+
+        window.onload = function () {
+            var url = getUrl();
+            var urlElements = document.getElementsByClassName("webpageURL");
+            for (var i = 0; i < urlElements.length; i++) {
+                urlElements[i].textContent = url;
+            }
+
+            getInfo();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="unknownprotocol">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="unknownprotocol_header">这很奇怪... Microsoft Edge 找不到此页</h1>
+                        <p id="unknownprotocol_body1">此页上的某些内容需要安装某个应用才能显示。</p>
+                        <p id="unknownprotocol_body2">尝试此操作</p>
+                        <ul>
+                            <li><id id="unknownprotocol_retype">重新键入网址</id></li>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="unknownprotocol_goback">返回到前一页</id></a></li>
+                            <li><id id="unknownprotocol_search">搜索你需要的应用</id></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">报告这一问题</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="unknownprotocol_PrivacyStatementLink"><id id="unknownprotocol_privacystatement"><small>隐私声明</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

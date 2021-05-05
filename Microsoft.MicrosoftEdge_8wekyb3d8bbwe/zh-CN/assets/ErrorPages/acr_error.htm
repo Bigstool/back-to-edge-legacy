@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>此页无法加载</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        window.onload = function () {
+            setGoHomeTarget();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="ACR">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="acr_error_header">此页无法加载</h1>
+                        <p id="acr_error_body1">我们已数次尝试为你加载此页，但此网站仍有问题。我们知道你肯定不愿意无聊地看着此页不停地反复加载，因此请过一会儿再尝试回到此页来。</p>
+                        <br />
+                        <p id="acr_error_body2">尝试此操作</p>
+                        <ul>
+                            <li><a href="about:start" id="gohome"><id id="acr_error_gohome">转到起始页</id></a></li>
+                            <li><a href="#" onclick="window.open(); return false;"><id id="acr_error_opentab">打开新标签页</id></a></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">报告这一问题</id></a></li> 
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="acr_error_PrivacyStatementLink"><id id="acr_error_privacystatement"><small>隐私声明</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

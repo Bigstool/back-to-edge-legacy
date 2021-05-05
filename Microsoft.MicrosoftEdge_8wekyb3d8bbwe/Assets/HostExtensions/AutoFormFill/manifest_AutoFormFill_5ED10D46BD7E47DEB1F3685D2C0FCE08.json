@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "AutoFormFill",
+  "author": "Microsoft",
+  "version": "1.0",
+  "description": "Auto Form Fill functionality for MS Edge",
+  "web_accessible_resources": [
+    "content/Autoformfill_ContentScript.js"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "key": "AutoFormFill_5ED10D46BD7E47DEB1F3685D2C0FCE08"
+}

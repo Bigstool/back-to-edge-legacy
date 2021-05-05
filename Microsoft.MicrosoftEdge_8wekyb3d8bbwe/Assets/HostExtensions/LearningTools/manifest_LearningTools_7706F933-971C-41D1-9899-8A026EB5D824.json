@@ -1,0 +1,11 @@
+{
+  "author": "Microsoft",
+  "manifest_version": 2,
+  "name": "LearningTools",
+  "version": "1.1",
+  "description": "Reads out webpage content.",
+  "web_accessible_resources": [
+    "LearningToolsStyles.css",
+    "LearningTools.js"
+  ]
+}

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+    <meta property="og:image" content="ms-appx-web:///Assets/ReadingListEPUBImage360x270.png" />
+    <title></title>
+    <script>
+        window.bookController = external.createBookReadingController();
+        window.onunload = function () {
+            window.bookController.postExtensionMessage(["close", "0"]);
+        }
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./css/bookviewer.css" />
+
+    <!-- Viewer -->
+    <script src="./js/bookviewer.js"></script>
+
+    <!-- Initialization code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.bookViewer = new BookViewer.BookViewer(new BookViewer.BookControllerProxy(window.bookController));
+            window.onunload = function () {
+                window.bookViewer.unload();
+            }
+        });
+    </script>
+</head>
+<body id="bookViewer">
+    <!-- Book viewport -->
+
+    <div id="bookViewportShadows" aria-hidden="true"></div>
+    <div id="bookViewportWrapper"></div>
+
+    <div id="gestureLayer"></div>
+
+    <div id="commandsContainer">
+        <nav class="nav-page">
+            <ul>
+                <li role="presentation">
+                    <button class="flipview-button flipview-button-left" id="leftButton" tabindex="-1"></button>
+                </li>
+                <li role="presentation">
+                    <button class="flipview-button flipview-button-right" id="rightButton" tabindex="-1"></button>
+                </li>
+            </ul>
+        </nav>
+        <button class="bookmark-button" hidden aria-hidden="true" id="bookmarkButton">
+            <i class="icon icon-bookmark"></i>
+        </button>
+    </div>
+
+    <div id="popupContainer" class="popup-container" role="dialog" tabindex="-1" aria-hidden="true">
+        <div class="popup-content" role="document">
+            <header class="popup-header">
+                <menu class="popup-menu">
+                    <li role="presentation">
+                        <button class="popup-button popup-close" id="popupButtonClose">
+                            <i class="icon icon-cancel"></i>
+                        </button>
+                    </li>
+                    <li role="presentation">
+                        <button class="popup-button" id="popupButtonZoomIn">
+                            <i class="icon icon-add"></i>
+                        </button>
+                    </li>
+                    <li role="presentation">
+                        <button class="popup-button" id="popupButtonZoomOut">
+                            <i class="icon icon-remove"></i>
+                        </button>
+                    </li>
+                    <li role="presentation">
+                        <button class="popup-button" id="popupButtonZoomReset">
+                            <i class="icon icon-fit-page"></i>
+                        </button>
+                    </li>
+                </menu>
+            </header>
+            <section class="popup-section" id="popupContent"></section>
+        </div>
+    </div>
+
+    <aside id="notePreviewContainer" tabindex="-1" aria-hidden="true">
+        <p id="notePreviewTextContent" class="msbooks-annotation-preview-text"></p>
+        <img id="notePreviewInkContent" class="msbooks-annotation-preview-image" />
+    </aside>
+
+    <aside id="annotationPhotoPreviewContainer" tabindex="-1" aria-hidden="true">
+        <div id="annotationAuthorshipId" class="msbooks-annotation-authorship-in-margin" style="display:none">
+            <div id="annotationPhotoBackgroundContainer" class="msbooks-annotation-authorship-initials-background"></div>
+            <img id="annotationPhotoImgContainer" />
+            <div id="annotationPhotoNameContainer" class="msbooks-annotation-authorship-name"></div>
+        </div>
+    </aside>
+
+    <p id="loadingContainer" class="loading-container" tabindex="0"></p>
+    <aside id="errorContainer" class="error-container"></aside>
+</body>
+</html>

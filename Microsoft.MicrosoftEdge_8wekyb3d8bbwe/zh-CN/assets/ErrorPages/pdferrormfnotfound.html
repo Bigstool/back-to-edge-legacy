@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>PDF 错误</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP500">
+            <table>
+                <tr>
+                    <td><span id="icon">&#xE946;</span> </td>
+                    <td>
+                        <h1 id="pdfmf_header">某些内容缺失</h1>
+                        <p id="pdfmf_body">若要查看 PDF，你需要当前还没有的某些媒体功能。你可以安装用于查看此 PDF 的媒体功能包。</p>
+                        <ul>
+                            <li><a href="" onclick="window.history.back()"><id id="pdfmf_goback">返回到前一页</id></a></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">报告这一问题</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="pdfmf_PrivacyStatementLink"><id id="pdfmf_privacystatement"><small>隐私声明</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

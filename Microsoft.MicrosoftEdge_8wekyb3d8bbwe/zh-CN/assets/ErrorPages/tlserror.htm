@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>无法安全地连接到此页面</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        var L_NONDEFAULT_SETTINGS_TEXT = "TLS 安全设置未设置为默认设置，这也可能导致此错误。";
+
+        function checkTLSError() {
+            var protocolSettings = Number(findValue("SecureProtocol="));
+            var defaultSettings = 2688; // 0xa80 - TLS 1.0, TLS 1.1, TLS 1.2
+            if (protocolSettings !== defaultSettings) {
+                document.getElementById("subError").innerHTML += "<br><br>" + L_NONDEFAULT_SETTINGS_TEXT;
+            }
+        }
+    </script>
+</head>
+
+<body onload="checkTLSError()">
+    <div id="Wrapper">
+        <div id="tlserror">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="tlserror_header">无法安全地连接到此页面</h1>
+                        <p class="BodyTextBlockStyle" id="subError">这可能是因为该站点使用过期的或不安全的 TLS 安全设置。如果这种情况持续发生，请与网站的所有者联系。</p>
+                        <p id="tlserror_body">尝试此操作:</p>
+                        <ul>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="tlserror_goback">返回到前一页</id></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

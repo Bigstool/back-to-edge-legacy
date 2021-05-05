@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' ms-appx-web:">
+    <title>无法访问此页</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script src="ms-appx-web:///Assets/ErrorPages/dnserror.js" language="javascript" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="PageUnavailable">
+            <div class="msgBlock">
+                <div class="msgBody">
+                    <table role="presentation">
+                        <tr>
+                            <td aria-hidden="true">
+                                <span id="icon">&#x0EB7D;</span>
+                            </td>
+                            <td>
+                                <h1 id="dnserror_unavailable_header">嗯...无法访问此页面</h1>
+                                <p id="dnserror_unavailable_body">尝试此操作</p>
+                                <ul>
+                                    <li id="PageUnavailableApplicationGuardWorkRelatedSuggestion">如果这是与工作相关的站点，请在应用程序防护之外的新 Microsoft Edge 窗口中打开它</li>
+                                    <li><id id="dnserror_unavailable_righturl">请确保你已获取正确的网址: </id> <span class="webpageURL"></span></li>
+                                    <li><a href="#" id="dnsErrorSearchLink"><id id="dnserror_unavailable_search">在必应上搜索“<span class="webpageURL"></span>”</id></a></li>
+                                    <li><a href="#" id="dnsErrorRefreshLink"><id id="dnserror_unavailable_refresh">刷新页面</id></a></li>
+                                </ul>
+                                <div id="moreInfoDropdown">
+                                    <a href="#" id="moreInformationDropdownLink" style="text-decoration: none;">
+                                        <span id="moreInformationDropdownSpan"></span>
+                                    </a>
+                                </div>
+                                <div id="infoBlockID">
+                                    <p id="subError"></p>
+                                    <p id="ErrorCode"></p>
+                                </div>
+                                <ul>
+                                    <li><a href="#" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">报告这一问题</id></a></li>
+                                </ul>
+                                <br>
+                                <a href="#" id="dnsPrivacyStatementLink"><id id="dnserror_unavailable_privacystatement"><small>隐私声明</small></id></a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="NotConnected">
+            <table role="presentation">
+                <tr>
+                    <td aria-hidden="true">
+                        <span id="icon">&#x0EB7C;</span>
+                    </td>
+                    <td>
+                        <h1 id="dnserror_offline_header">你尚未连接</h1>
+                        <p id="dnserror_offline_body1">Web 因你而不同。 </p>
+                        <p id="dnserror_offline_body2">我们会让你重新联机</p>
+                        <ul>
+                            <li class="noCables"><id id="dnserror_offline_checkcables">请检查网络电缆是否已插好。</id></li>
+                            <li><id id="dnserror_offline_airplanemode">请确保你不在飞行模式下。</id></li>
+                            <li><id id="dnserror_offline_wirelessswitch">查看你的无线交换机是否已启用。</id></li>
+                            <li><id id="dnserror_offline_restartrouter">重启路由器。</id></li>
+                        </ul>
+                        <br />
+                        <button class="pushbutton" id="LaunchMSSettingsNetworkStatus" type="submit"><id id="dnserror_offline_networksettings">帮助我修复它</id></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="locResources">
+            <p id="L_Unavailable_Title_TEXT">无法访问此页面</p>
+            <p id="L_Disconnected_Title_TEXT">未连接到网络</p>
+            <p id="L_RESOURCE_NOT_FOUND_TEXT">找不到此网站。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAECONNRESET_TEXT">DNS 服务器拒绝连接。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAETIMEDOUT_TEXT">与 DNS 服务器的连接超时。</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_SUCCESS_TEXT">发生临时 DNS 错误。请尝试刷新页面。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAHOST_NOT_FOUND_TEXT">DNS 名称不存在。</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_OTHER_TEXT">DNS 服务器可能存在问题。</p>
+            <p id="L_DOWNLOAD_FAILURE_TEXT">已重置与该网站的连接。</p>
+            <p id="L_REDIRECT_FAILED_TEXT">重定向过多。</p>
+            <p id="L_CONNECTION_TIMEOUT_TEXT">连接到此网站所花费的时间过长。</p>
+            <p id="L_DATA_NOT_AVAILABLE_TEXT">已连接到该网站, 但是未接收到来自该网站的任何数据。</p>
+            <p id="L_ERROR_CODE_TEXT">错误代码: </p>
+            <p id="L_MOREINFO_TEXT">详细信息</p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,19 @@
+{
+  "author": "Microsoft",
+  "manifest_version": 1,
+  "name": "BookReader",
+  "version": "1.1",
+  "description": "EPUB book reader.",
+  "content_scripts": [
+    {
+      "matches": [
+        "ms-local-stream://*/Assets/bookviewer-hostext.htm"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "js/bookviewer.js",
+        "js/startup.js"
+      ]
+    }
+  ]
+}
