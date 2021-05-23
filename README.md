@@ -59,6 +59,12 @@ Now you should have your Edge uninstalled from your PC.
 
    If you have followed this guide correctly, you should be able to launch Edge Legacy from the Start Menu by now.
 
-### Install Edge Beta (Optional)
+### Install Edge Without the Administrator Privileges (Optional)
 
-If you still wish to use the features provided by the new Edge, you may install Edge from [the Beta channel](https://www.microsoftedgeinsider.com/en-us/).
+If you still wish to use the features provided by the new Edge, you may install Edge without the administrator privileges (to your AppData folder) by following the following steps:
+
+1. Download the [Edge Installer](https://go.microsoft.com/fwlink/?linkid=2108834&Channel=Stable&language=en-us).
+2. Run the Edge Installer. Choose "No" in the UAC prompt (Do you want to allow this app to make changes to your device?).
+3. In the pop-up dialogue which reads "Would you like to install Microsoft Edge without administrator privileges?", choose "Yes".
+4. Wait till the installation completes.
+
