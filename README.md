@@ -40,6 +40,10 @@ Since starting from the recent updates, attempting to launch Edge Legacy with Ed
    setup.exe --uninstall --system-level --verbose-logging -- force-uninstall
    ```
 
+4. In the File Explorer, go to `C:\Program Files (x86)\Microsoft` and delete the `Edge` folder.
+
+   **Important!** Not following this step may cause 0x800f0922 errors when attempting to install Windows update KB5003173 as described in [#1](https://github.com/Bigstool/back-to-edge-legacy/issues/1).
+
 Now you should have your Edge uninstalled from your PC.
 
 ### Restore Edge Legacy
